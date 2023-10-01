@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>caculator by mobin</title>
+	
+	<style> 
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+				body{
+			background-image: url('01.jpg');
+			background-size: 100% 100%;
+		}
+		.center-calculator{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		form{
+			width: 400px;
+			height: 520px;
+			box-shadow: 0 0 15px 1px grey;
+		}
+		#app_name{
+			width: inherit;
+			font-size: 0.8rem;
+			padding: 2px 0 2px 10px;
+			background-color: #303030;
+			color: white;
+			outline: none;
+			border: none;
+		}
+		#display_answer{
+			width: inherit;
+			height: 100px;
+			border: none;
+			outline: none;
+			background: #303030;
+			color: white;
+			font-size: 2rem;
+			text-align: right;
+			padding: 20px;
+
+		}
+		.layer1{
+			width: inherit;
+			display: flex;
+			justify-content: center;
+			height: 90px;
+		}
+		input{
+			flex: 1;
+			font-size: 1.4rem;
+			outline: none;
+			border: 1px solid #504f4f;
+			color: white;
+		}
+		.layer2{
+			width: inherit;
+			display: flex;
+			justify-content: center;
+			height: 40px;
+		}
+		.main_num{
+			background: #101011;
+			color: white;
+		}
+		.operator{
+			background: #303030;
+			color: white;
+		}
+		input:hover{
+			background-color: #474747;
+			border: 1px solid grey;
+		}
+
+		@media screen and (max-width:400px) {
+			form{
+			width: 330px;
+			height: 450px;
+		
+		}
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="center-calculator"> 
+		<form name="calcy"> 
+			<input type="text" name=""  id="app_name" value="Calculator by mobin">
+			<input type="text" name="answers"  id="display_answer" >
+
+		<div class="layer2"> 
+			<input type="button" name= "" class="operator" value="c" id="clearbutton" onclick="calcy.answers.value= ' ' " >
+			<input type="button" name=" " class="operator" value="=" onclick="calcy.answers.value = eval(calcy.answers.value)">
+		</div>
+		
+		<div class="layer1"> 
+			<input type="button" name="" class="main_num" value="7" onclick="calcy.answers.value +='7' ">
+			<input type="button" name="" class="main_num" value="8" onclick="calcy.answers.value +='8' ">
+			<input type="button" name="" class="main_num" value="9" onclick="calcy.answers.value +='9' ">
+			<input type="button"  name="" class="operator" value="*" onclick="calcy.answers.value +='*' ">
+		</div>
+		<div class="layer1"> 
+			<input type="button" name="" class="main_num" value="4" onclick="calcy.answers.value +='4' ">
+			<input type="button" name="" class="main_num" value="5" onclick="calcy.answers.value +='5' ">
+			<input type="button" name="" class="main_num" value="6" onclick="calcy.answers.value +='6' ">
+			<input type="button"  name="" class="operator" value="-" onclick="calcy.answers.value +='-' ">
+		</div> 
+		<div class="layer1"> 
+			<input type="button" name="" class="main_num" value="1" onclick="calcy.answers.value +='1' ">
+			<input type="button" name="" class="main_num" value="2" onclick="calcy.answers.value +='2' ">
+			<input type="button" name="" class="main_num" value="3" onclick="calcy.answers.value +='3' ">
+			<input type="button" name="" class="operator"  value="+" onclick="calcy.answers.value +='+' ">
+			</div> 
+		<div class="layer1"> 
+			<input type="button" name="" class="operator" value="." onclick="calcy.answers.value +='.' ">
+			<input type="button" name="" class="main_num" value="0" onclick="calcy.answers.value +='0' ">
+			<input type="button" name="" class="operator" value="%" onclick="calcy.answers.value +='%' ">
+			<input type="button" name="" class="operator" value="/" onclick="calcy.answers.value +='/' ">
+		
+		</div> 
+		</form>
+	</div>
+	
+</body>
+</html>
